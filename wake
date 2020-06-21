@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+import os
+
+"""wake: Automate sending Wake On Lan packet using wakeonlan tool from brew."""
+
+__author__ = 'Mohd Yusuf Abdul Hamid'
+
+def main():
+    """Main function that executes the wakey utility"""
+    port = '7'  # default WOL port usually is 7 or 9
+    mac_addr = 'AA:BB:CC:DD:EE:FF'
+    ip_addr = '192.168.0.255'
+    os.system('wakeonlan -i ' + ip_addr + ' -p ' + port + ' ' + mac_addr)
+
+if __name__ == "__main__":
+    main()
